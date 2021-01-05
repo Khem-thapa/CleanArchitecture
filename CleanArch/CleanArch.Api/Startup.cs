@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using CleanArch.Api.Configuration;
 using CleanArch.Infra.Data.Context;
 using CleanArch.Infra.IOC;
 using MediatR;
@@ -36,6 +37,8 @@ namespace CleanArch.Api
 
             services.AddSwaggerGen(c => c.SwaggerDoc("v1", new OpenApiInfo { Title = "Weather Forecast", Version = "v1" }));
             services.AddMediatR(typeof(Startup));
+
+            services.RegisterAutoMapper();
             RegisterService(services);
         }
 
