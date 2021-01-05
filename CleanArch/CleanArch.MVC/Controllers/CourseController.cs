@@ -9,7 +9,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace CleanArch.MVC.Controllers
 {
-    [Authorize]
+    //[Authorize]
     public class CourseController : Controller
     {
         private readonly ICourseService _courseService;
